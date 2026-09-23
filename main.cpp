@@ -45,3 +45,9 @@ int Color::getGreen() const {
 int Color::getBlue() const {
     return blue;
 }
+
+void Color::print() const {
+    cout << "red: " << getRed()
+         << "  green: " << getGreen()
+         << "  blue: " << getBlue() << endl;
+}
