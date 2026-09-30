@@ -11,6 +11,9 @@ private:
     int blue;
 
 public:
+    Color();
+    Color(int redValue, int greenValue, int blueValue);
+    Color(int redValue, int greenValue);
     void setRed(int value);
     void setGreen(int value);
     void setBlue(int value);
@@ -51,6 +54,24 @@ int main() {
     ocean.print();
 
     return 0;
+}
+
+Color::Color() {
+    red = 0;
+    green = 0;
+    blue = 0;
+}
+
+Color::Color(int redValue, int greenValue, int blueValue) {
+    red = redValue;
+    green = greenValue;
+    blue = blueValue;
+}
+
+Color::Color(int redValue, int greenValue) {
+    red = redValue;
+    green = greenValue;
+    blue = 0;
 }
 
 void Color::setRed(int value) {
