@@ -24,21 +24,10 @@ public:
 };
 
 int main() {
-    // make three Color objects
-    Color crimson;
-    crimson.setRed(220);
-    crimson.setGreen(20);
-    crimson.setBlue(60);
-
-    Color forest;
-    forest.setRed(34);
-    forest.setGreen(139);
-    forest.setBlue(34);
-
-    Color ocean;
-    ocean.setRed(30);
-    ocean.setGreen(144);
-    ocean.setBlue(255);
+    // make Color objects with each constructor type
+    Color defaultColor;
+    Color crimson(220, 20, 60);
+    Color forest(34, 139);
 
     // print each object in a small rgb table
     cout << left << setw(12) << "Color"
@@ -46,12 +35,12 @@ int main() {
          << setw(6) << "Blue" << endl;
     cout << "------------------------------" << endl;
 
-    cout << left << setw(12) << "Crimson" << right;
+    cout << left << setw(12) << "Default" << right;
+    defaultColor.print();
+    cout << left << setw(12) << "Full rgb" << right;
     crimson.print();
-    cout << left << setw(12) << "Forest" << right;
+    cout << left << setw(12) << "Partial rg" << right;
     forest.print();
-    cout << left << setw(12) << "Ocean" << right;
-    ocean.print();
 
     return 0;
 }
